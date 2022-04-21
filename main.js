@@ -18,6 +18,20 @@ let headerListAnimation = anime({
 
 let controller = new ScrollMagic.Controller();
 
-let scene = new ScrollMagic.Scene({
-    triggerElement:''
-});
+let scene1 = new ScrollMagic.Scene({
+    triggerElement:'#about-me'
+})
+.setClassToggle('#about-me', 'fade-in')
+.addTo(controller);
+
+let scene2 = new ScrollMagic.Scene({
+    triggerElement:'#education'
+})
+.setClassToggle('#education', 'fade-in')
+.addTo(controller);
+
+let scene3 = new ScrollMagic.Scene({
+    triggerElement:'#portfolio'
+})
+.setClassToggle('#portfolio', 'fade-in')
+.addTo(controller);
