@@ -41,10 +41,10 @@ header li{
 
 
 main{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items:center;
+    align-items:center; */
     border: 2px solid white;
     min-height: 100vh;
     min-width: 80%;
@@ -87,4 +87,28 @@ main{
 #code-font{
     font-family: 'Source Code Pro', monospace;
     font-size: larger;
+}
+
+#pin-container{
+    height:100%;
+    width:100%;
+    overflow:hidden;
+}
+
+.panel {
+    height: 100%;
+    width:100%;
+    position: absolute;
+}
+
+.about-me{
+    background-color: red;
+}
+
+.education{
+    background-color: blue;
+}
+
+.portfolio{
+    background-color: green;
 }
