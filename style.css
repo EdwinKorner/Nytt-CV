@@ -1,0 +1,80 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #121212;
+    color: white;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+header{
+    min-height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    /* border: 2px solid black; */
+}
+header li{
+    list-style: none;
+    display: inline;
+    margin-left: 2rem;
+}
+
+.ul{
+    opacity: 0;
+    margin-right: 2rem;
+}
+
+.listLink{
+    text-decoration: none;
+    color: white;
+}
+
+.listLink:hover, .listLink:active{
+    border-bottom: 2px solid white;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    border: 2px solid white;
+    min-height: 100vh;
+    max-width: 80%;
+}
+
+#main-container{
+    border: 2px solid white;
+    /* min-width: 100%; */
+    min-height: 100%;
+}
+
+#start-text-div{
+    min-height: 90vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 5rem;
+    font-family: 'Akshar', sans-serif;
+}
+
+.start-text{
+    /* transform: translateX(-90vh); */
+    opacity: 0;
+}
+
+#about-me, #education, #portfolio{
+    min-height: 100vh;
+}
+
+#code-font{
+    font-family: 'Source Code Pro', monospace;
+    font-size: larger;
+}
