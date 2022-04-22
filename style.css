@@ -45,9 +45,9 @@ main{
     flex-direction: column;
     justify-content: space-around;
     align-items:center; */
-    border: 2px solid white;
+    
     min-height: 100vh;
-    min-width: 80%;
+    min-width: 100%;
 }
 
 #main-container{
@@ -71,22 +71,23 @@ main{
     opacity: 0;
 }
 
-#about-me, #education, #portfolio{
+/* #about-me, #education, #portfolio{
     min-height: 50vh;
     opacity:0;
     transform: scale(0.7);
     transition: 0.5s;
-}
+} 
 
-#about-me.fade-in, #education.fade-in, #portfolio.fade-in{
+ #about-me.fade-in, #education.fade-in, #portfolio.fade-in{
     opacity:1;
     transform: scale(1);
     width: 100%;
-}
+}  */
 
 #code-font{
     font-family: 'Source Code Pro', monospace;
     font-size: larger;
+    font-weight: 300;
 }
 
 #pin-container{
@@ -102,15 +103,24 @@ main{
 }
 
 .about-me{
-    background-color: red;
+    background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+    width: 100%;
 }
 
 .education{
-    background-color: blue;
+    background-image: linear-gradient(to top, #ff0844 0%, #f53e38 100%);
     right: 100%;
 }
 
 .portfolio{
     background-color: green;
     left: 100%;
+}
+
+#section-positioning{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    flex-direction: column;
 }
