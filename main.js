@@ -19,8 +19,6 @@ let headerListAnimation = anime({
 
 
 const fromLeft = {
-    // curviness: 1.25,
-    // autoRotate: true,
     values: [
         {x:"100%"}
     ]
@@ -33,7 +31,21 @@ const fromRight = {
     ]
 }
 
+const fromLeft2 = {
+    values: [
+        {x:"100%"}
+    ]
+}
+
+const fromRight2 = {
+    curviness: 1.25,
+    values: [
+        {x:"-100%"},
+    ]
+}
+
 const tween = new TimelineLite();
+const tween2 = new TimelineLite();
 
 tween.add(
     TweenLite.to('section.panel.education', 1, {
@@ -50,12 +62,11 @@ tween.add(
 );
 
 let controller = new ScrollMagic.Controller();
-// let triggerHook = scene.triggerHook();
 
 const scene1 = new ScrollMagic.Scene({
     triggerElement: "section.panel.about-me",
     triggerHook: 0,
-    duration: "300%",
+    duration: "500%",
 })
 .setTween(tween)
 .addIndicators()
@@ -65,13 +76,22 @@ const scene1 = new ScrollMagic.Scene({
 const scene2 = new ScrollMagic.Scene({
     triggerElement: "section.panel.education",
     triggerHook: 0,
-    duration: "300%",
+    duration: "500%",
 })
 .setTween(tween)
 .addIndicators()
 .setPin("section.panel.education")
 .addTo(controller);
 
+const scene3 = new ScrollMagic.Scene({
+    triggerElement: "section.panel.portfolio",
+    triggerHook: 0,
+    duration: "500%",
+})
+.setTween(tween)
+.addIndicators()
+.setPin("section.panel.portfolio")
+.addTo(controller);
 
 
 

@@ -7,38 +7,10 @@ body{
     color: white;
     font-family: sans-serif;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    min-height: 700vh;
 }
-
-header{
-    min-height: 10vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: row;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    /* border: 2px solid black; */
-}
-header li{
-    list-style: none;
-    display: inline;
-    margin-left: 2rem;
-}
-
-.ul{
-    opacity: 0;
-    margin-right: 2rem;
-}
-
-.listLink{
-    text-decoration: none;
-    color: white;
-}
-
-.listLink:hover, .listLink:active{
-    border-bottom: 2px solid white;
-}
-
 
 main{
     /* display: flex;
@@ -58,7 +30,7 @@ main{
 }
 
 #start-text-div{
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -113,7 +85,7 @@ main{
 }
 
 .portfolio{
-    background-color: green;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
     left: 100%;
 }
 
