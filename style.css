@@ -107,8 +107,10 @@ main{
 
 .education{
     background-color: blue;
+    right: 100%;
 }
 
 .portfolio{
     background-color: green;
+    left: 100%;
 }
