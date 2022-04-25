@@ -31,21 +31,7 @@ const fromRight = {
     ]
 }
 
-const fromLeft2 = {
-    values: [
-        {x:"100%"}
-    ]
-}
-
-const fromRight2 = {
-    curviness: 1.25,
-    values: [
-        {x:"-100%"},
-    ]
-}
-
 const tween = new TimelineLite();
-const tween2 = new TimelineLite();
 
 tween.add(
     TweenLite.to('section.panel.education', 1, {
@@ -54,12 +40,21 @@ tween.add(
     })
 )
 
+
 tween.add(
     TweenLite.to('section.panel.portfolio', 1, {
         bezier: fromRight,
         ease: Power1.easeInOut,
     })
-);
+    );
+    
+    tween.add(
+        TweenLite.to('section.panel.contact-info', 1, {
+            bezier: fromLeft,
+            ease: Power1.easeInOut,
+        })
+    );
+
 
 let controller = new ScrollMagic.Controller();
 
@@ -91,6 +86,16 @@ const scene3 = new ScrollMagic.Scene({
 .setTween(tween)
 .addIndicators()
 .setPin("section.panel.portfolio")
+.addTo(controller);
+
+const scene4 = new ScrollMagic.Scene({
+    triggerElement: "section.panel.contact-info",
+    triggerHook:0,
+    duration: "500%",
+})
+.setTween(tween)
+.addIndicators()
+.setPin("section.panel.contact-info")
 .addTo(controller);
 
 
